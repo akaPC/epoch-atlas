@@ -1,0 +1,8 @@
+node_modules
+dist
+dev-dist
+docs/screenshots
+package-lock.json
+*.md
+src/data
+src/content

@@ -1,0 +1,38 @@
+/* Epoch Atlas design tokens: dark tactical console */
+:root {
+  --bg-void: #05070a;
+  --bg-panel: #0a0e14;
+  --bg-raised: #10161f;
+  --bg-hover: #161e2a;
+
+  --text-primary: #e6edf3;
+  --text-secondary: #9aa7b4;
+  --text-muted: #5c6875;
+
+  --accent-cyan: #22d3ee;
+  --accent-cyan-dim: rgba(34, 211, 238, 0.35);
+  --accent-cyan-soft: rgba(34, 211, 238, 0.12);
+  --accent-amber: #f5b625;
+  --accent-amber-dim: rgba(245, 182, 37, 0.35);
+  --accent-amber-soft: rgba(245, 182, 37, 0.12);
+  --accent-red: #ff4d4f;
+  --accent-red-dim: rgba(255, 77, 79, 0.35);
+  --accent-red-soft: rgba(255, 77, 79, 0.12);
+
+  --hairline: rgba(34, 211, 238, 0.08);
+  --hairline-strong: rgba(34, 211, 238, 0.18);
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-console: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-slow: 250ms;
+
+  --rail-width: 232px;
+  --statusbar-height: 44px;
+
+  color-scheme: dark;
+}
