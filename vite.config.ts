@@ -47,7 +47,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,woff2,svg,png,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,woff2,svg,png,webmanifest,json}'],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         navigateFallback: '/epoch-atlas/index.html',
       },

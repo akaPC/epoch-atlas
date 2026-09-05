@@ -1,0 +1,65 @@
+# Methodology
+
+This file mirrors the in-app Methodology page (`src/content/methodology.mdx`).
+
+## What this atlas is
+
+Epoch Atlas is a reference work in three movements. The Record is history: what happened, how it worked, what it depended on, what it enabled. The Threshold is forecasting: when systems that match or exceed human cognitive capability arrive, under explicit models. The Horizon is projection: what fourteen fields look like across the next hundred years, conditional on how fast the transition from artificial general intelligence to superintelligence runs.
+
+Each movement uses a different epistemic standard, and the atlas tries never to let them blur. Historical claims carry a precision flag on the date and a confidence rating on the interpretation. Forecasts carry percentiles and a written critique. Projections carry a confidence rating, a justification, the physical limits that bound them, and the chain of present-day events they depend on.
+
+## How The Record was built
+
+Every epoch has a thesis: a claim about what changed and why. Every event has an explanation for an intelligent generalist, a mechanism section that says how the thing actually worked, and a significance score from 1 to 10 with a written justification. Significance is an editorial judgment about how much later technology depended on the event, not a measurement. The scores are consistent within the atlas and are not calibrated against any external scale.
+
+Dependencies are recorded as ids. A prerequisite is an earlier event without which the later one could not have happened in the form it did: a physical input, a technique, a body of knowledge, or an institution. Links of loose inspiration are excluded. The dependency graph and the acceleration panel are computed from these records, so they inherit both the care and the gaps in the curation.
+
+The Record stops at September 2026. Anything whose historical record is still forming is marked with a developing verification flag, and the text says what was established as of mid-2026 and what remains to be confirmed.
+
+## How The Threshold was built
+
+Eight models produce distributions for the arrival year of AGI and ASI. Each is typed data: assumptions, inputs, five percentiles for each distribution, the argument for the distribution, and a critique written as a fair opponent would write it. The models are deliberately heterogeneous:
+
+1. **Compute-trend extrapolation** projects frontier training compute, hardware price-performance and algorithmic efficiency, then asks when the trend hits energy and capital walls.
+2. **Biological anchors** asks how much compute the brain represents and when training runs of that scale become affordable, with wide error bars.
+3. **Expert survey aggregation** uses published surveys of machine learning researchers and tracks how their medians have moved.
+4. **Forecasting-community aggregates** use prediction-platform medians and superforecaster tournaments, and their drift toward earlier dates.
+5. **Capability benchmark saturation** measures how quickly benchmarks go from introduction to saturation and what remains unsaturated.
+6. **Economic diffusion** asks how fast capability turns into deployment given regulation, integration cost and trust, and defines AGI by economic replacement.
+7. **The skeptic model** gives full weight to the case that current architectures plateau: data walls, reasoning brittleness, embodiment, energy.
+8. **R&D acceleration** models the feedback loop in which AI systems do a large fraction of AI research.
+
+The ensemble reconstructs a piecewise-linear cumulative distribution from each model's percentiles and takes the weighted mixture. Default weights are editorial and are shown. The weights are editable in the interface because the disagreement between models is the finding: no weighting makes the models agree, and the ensemble only says where the probability mass sits under a stated weighting.
+
+Three takeoff scenarios (slow, moderate, fast) describe the years between AGI and ASI, the mechanisms that set the pace, and the probability assigned to each. They are the branches used across The Horizon.
+
+## How The Horizon was built
+
+Each of fourteen fields is projected across five windows (2026 to 2030, 2030 to 2040, 2040 to 2060, 2060 to 2090, 2090 to 2126) and three branches pinned to the takeoff scenarios. A projection is a headline capability, a narrative of what it looks like on the ground, a dependency chain into The Record, the key uncertainties, the leading indicators to watch, and a confidence rating with a justification. A capability index from 0 to 100 summarizes each field on a fan chart, where 100 is the field's plausible physical ceiling as defined in the field record.
+
+Physical limits are cited where they bound a projection: thermodynamics and the Carnot limit, Landauer's limit, the speed of light, the rocket equation, the Shockley-Queisser limit, photosynthetic efficiency ceilings, materials strength ceilings, and biological constraints. No projection is allowed to violate them, and the fast branch is not allowed to wish them away.
+
+## Known failure modes
+
+Forecasting has a track record, and much of it is embarrassing. The atlas takes the following failure modes seriously:
+
+- **Extrapolation past a regime change.** Trends bend. Compute scaling could hit energy limits; benchmark saturation could stop translating into economic value. The skeptic model exists to keep this live.
+- **Definitional drift.** Much disagreement about AGI timelines is disagreement about what AGI means. The three competing definitions are kept apart on purpose.
+- **Recency and availability bias.** Recent events are better documented and more finely divided, which flatters the acceleration curve. The acceleration panel lets you change the significance threshold to test how much of the pattern survives.
+- **Selection of sources.** The atlas cites what its authors know and trust. Absence of a citation is not evidence of absence.
+- **Narrative seduction.** A vivid scenario reads as more probable than it is. Every scenario here is paired with its critique.
+- **Overconfidence at long horizons.** Confidence ratings fall with distance by rule. Anything about 2090 to 2126 is low confidence, and it says so.
+
+## Historical track record
+
+Forecasters have hit and missed. Hits include Moore's 1965 extrapolation of transistor density, Arthur C. Clarke's 1945 geostationary communications satellites, and the broad shape of the internet as described in Licklider's 1960s memos. Misses include the repeated predictions of controlled fusion within twenty years since the 1950s, the 1950s expectation of routine nuclear-powered aircraft and cars, Herbert Simon's 1965 prediction that machines would do any work a human can within twenty years, the 1970s AI winter that followed early optimism, the confident 1990s forecasts of paperless offices and flying cars, and the expert surveys in the 2010s that put human-level AI decades later than the same experts said a few years afterward.
+
+Two patterns recur. Digital and information technologies have tended to arrive faster than forecast, and physical technologies that require new energy sources, new materials or new infrastructure have tended to arrive slower. The Horizon applies that asymmetry explicitly: software-heavy fields accelerate hard under the fast branch, and physical fields accelerate less, even with superhuman design assistance, because atoms move on their own clock.
+
+## Data integrity
+
+The build fails if any record is malformed, if any epoch falls below its minimum event count, if any event lacks a 300 to 600 word explanation or a domain, if any dependency id does not resolve, if any projection window or branch is empty, if any narrative is outside 200 to 400 words, if more than 3 percent of records lack sources, or if any string contains filler text or an em dash. Every record shows its review date.
+
+## A standing invitation to disagree
+
+This atlas is a set of explicit claims with explicit reasoning. If you think a date is wrong, a dependency is missing, a model is mis-weighted, a limit is mis-stated, or a projection is fantasy, the repository accepts issues and pull requests. Bring a source. The point of writing the reasoning down is so it can be checked.

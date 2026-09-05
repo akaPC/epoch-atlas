@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "validate": "tsx scripts/validate-data.ts",
+    "validate": "tsx scripts/validate-data.ts && tsx scripts/build-search-index.ts",
     "build": "npm run validate && vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",

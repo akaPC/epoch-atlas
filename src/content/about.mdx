@@ -1,0 +1,21 @@
+## What Epoch Atlas is
+
+Epoch Atlas is an interactive reference work on human technological advancement. It has three movements: The Record (history from the first stone tools to September 2026), The Threshold (a multi-model forecast of when artificial general intelligence and superintelligence arrive), and The Horizon (field-by-field projections to 2126, branched by takeoff scenario).
+
+It is built to be read like a serious reference and to look like an operations console: dark panels, hairline grids, monospaced index labels, and restrained motion. Every record carries its sources and its review date, and where it applies, a confidence rating.
+
+## How it is built
+
+The site is static. There is no backend, no database and no API key. It is a Vite and React application in strict TypeScript, styled with Tailwind on a custom token layer, with charts hand-built in D3. All content lives as typed data validated with Zod at build time. Long-form prose is MDX. Search is client-side, indexed at build time. The site is a progressive web app and works offline after first load.
+
+Quality gates run on every push: lint, typecheck, unit and schema tests that assert content completeness, a production build, end-to-end tests with accessibility checks, and Lighthouse thresholds. Deployment is GitHub Pages through GitHub Actions.
+
+## How to contribute
+
+The repository is public under the MIT license. Add an event to an epoch file, add or revise a projection in a field file, or challenge a forecast model's percentiles. The contributing guide explains the record shapes and the rules: real sources only, no filler text, no em dashes, stable ids. The build will tell you if a record is incomplete.
+
+## Accuracy and limits
+
+The Record was written from established scholarship and primary literature as of 2026. Where the evidence is contested, the record says so and lowers its confidence. Events after mid-2026 are marked as developing. The Threshold and The Horizon are forecasts, and forecasts are wrong in ways their authors cannot see. The methodology page lists the failure modes the atlas tries to guard against and the ones it cannot.
+
+The atlas is an editorial work, not a consensus document. It is meant to be argued with.
