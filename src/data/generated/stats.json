@@ -1,8 +1,8 @@
 {
-  "epochs": 0,
-  "events": 0,
-  "forecastModels": 0,
-  "projections": 0,
-  "sources": 0,
-  "fields": 0
+  "epochs": 13,
+  "events": 293,
+  "forecastModels": 8,
+  "projections": 210,
+  "sources": 1343,
+  "fields": 14
 }
