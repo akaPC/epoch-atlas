@@ -10,6 +10,8 @@ An interactive atlas of human technological advancement in three movements, buil
 
 Static site. No backend, no database, no API keys. Works offline after first load.
 
+Hosted on GitHub Pages (canonical) and mirrored on Cloudflare Workers static assets. The two builds differ only in base path: `/epoch-atlas/` for Pages, `/` for Cloudflare (`ATLAS_BASE=/`).
+
 ## Screenshots
 
 | Home | Master timeline |
@@ -42,6 +44,14 @@ npm run build       # validates data, builds the search index, builds the site, 
 npm run e2e         # Playwright: every route, search, scenario reflow, weight drag, axe on five pages
 npx lhci autorun    # Lighthouse thresholds: performance 90, accessibility 100, best practices 95, SEO 95
 ```
+
+## Deploying to Cloudflare
+
+```bash
+npm run deploy:cf
+```
+
+This builds with `ATLAS_BASE=/` and runs `wrangler deploy` using `wrangler.jsonc` (Workers static assets with single-page-application fallback, which replaces the `404.html` trick used on Pages). CI also deploys to Cloudflare on every push to `main` when the `CLOUDFLARE_API_TOKEN` secret and `CLOUDFLARE_ACCOUNT_ID` variable are set; without them the job is skipped.
 
 ## Data model
 

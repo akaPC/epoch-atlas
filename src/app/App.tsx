@@ -25,7 +25,7 @@ const AboutPage = lazy(() => import('@/pages/AboutPage'));
 
 export function App() {
   return (
-    <BrowserRouter basename="/epoch-atlas">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <ScenarioProvider>
         <FocusProvider>
           <SearchProvider>

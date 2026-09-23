@@ -9,7 +9,7 @@
 - MiniSearch for client-side full-text search, indexed at build time.
 - Vitest for unit and quality-gate tests. Playwright for end-to-end and accessibility (axe-core). Lighthouse CI.
 - `vite-plugin-pwa` for offline caching. Self-hosted fonts via `@fontsource/*`.
-- Static output deployed to GitHub Pages by GitHub Actions. No backend, no database, no API keys.
+- Static output deployed to GitHub Pages by GitHub Actions, and mirrored to Cloudflare Workers static assets (`wrangler.jsonc`). No backend, no database, no API keys.
 
 ## Folder layout
 
@@ -46,7 +46,7 @@ docs/             Architecture, methodology, decisions, citation gaps, event id 
 
 ## Build pipeline (CI)
 
-On every push to `main`: `npm ci`, install Chromium, `npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`, `npm run e2e` (against `vite preview`), `lhci autorun`, upload `dist/` as a Pages artifact, deploy. `dist/404.html` is a copy of `index.html` so deep links resolve on GitHub Pages.
+On every push to `main`: `npm ci`, install Chromium, `npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`, `npm run e2e` (against `vite preview`), `lhci autorun`, upload `dist/` as a Pages artifact, deploy. `dist/404.html` is a copy of `index.html` so deep links resolve on GitHub Pages. A second build with `ATLAS_BASE=/` is uploaded and deployed to Cloudflare Workers by the `deploy-cloudflare` job when credentials are present; Workers' `not_found_handling: single-page-application` serves deep links there. The base path flows from `ATLAS_BASE` into Vite's `base`, the router basename (`import.meta.env.BASE_URL`), the PWA manifest and the service worker fallback.
 
 ## Design system
 

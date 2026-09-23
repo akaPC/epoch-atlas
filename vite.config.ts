@@ -15,8 +15,14 @@ function gitHash(): string {
   }
 }
 
+/**
+ * Base path. GitHub Pages serves the atlas under /epoch-atlas/; Cloudflare Workers
+ * serves it from the root. Set ATLAS_BASE=/ for a root deploy.
+ */
+const base = process.env.ATLAS_BASE ?? '/epoch-atlas/';
+
 export default defineConfig({
-  base: '/epoch-atlas/',
+  base,
   define: {
     __BUILD_HASH__: JSON.stringify(process.env.GITHUB_SHA ? process.env.GITHUB_SHA.slice(0, 7) : gitHash()),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
@@ -38,8 +44,8 @@ export default defineConfig({
         theme_color: '#05070a',
         background_color: '#05070a',
         display: 'standalone',
-        start_url: '/epoch-atlas/',
-        scope: '/epoch-atlas/',
+        start_url: base,
+        scope: base,
         icons: [
           { src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
@@ -49,7 +55,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,woff2,svg,png,webmanifest,json}'],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
-        navigateFallback: '/epoch-atlas/index.html',
+        navigateFallback: `${base}index.html`,
       },
     }),
   ],
