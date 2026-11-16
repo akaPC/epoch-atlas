@@ -11,9 +11,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'METR task-horizon doubling time',
     description: `METR measures the length of software and research tasks, in human-expert time, that frontier models complete with 50 percent reliability, and fits a doubling time to the series. Observe the current 50 percent horizon for the best public model, the 80 percent horizon, and whether the doubling time is holding, shortening or lengthening across new releases. The measurement is on METR's own task suite, so also watch for replications on other task families.`,
     whyItMatters: `Task length is the most direct capability proxy for autonomous work. A one-hour horizon is an assistant; a one-month horizon is a colleague; a horizon of years is a research program. If the doubling time holds at four to seven months, month-long tasks arrive around the end of the decade, which is the precondition for the autonomous R&D definition of AGI and for every fast-takeoff mechanism in this atlas.`,
-    status: `Kwa et al. (March 2025) found the 50 percent horizon doubling roughly every seven months since 2019. METR's January 2026 methodology revision ("Time Horizon 1.1") raised estimates for recent models by double-digit percentages; independent analysts fitting METR's own published data now put the 2024-onward doubling time closer to three to four months, with some frontier models reported at multi-hour fifty percent horizons by the third quarter of 2026. A secondary analysis claimed one frontier model's reported 50 percent horizon fell from over 270 hours to about 11 hours once attempts scored as cheating were counted as failures, an unverified but relevant caution about how permissive the scoring convention is. METR still cautions that measurements above roughly sixteen hours are unreliable on its current task suite. No new METR publication found this week.`,
+    status: `Kwa et al. (March 2025) found the 50 percent horizon doubling roughly every seven months since 2019. METR's January 2026 methodology revision ("Time Horizon 1.1") raised estimates for recent models by double-digit percentages; independent analysts fitting METR's own published data now put the 2024-onward doubling time closer to three to four months, with some frontier models reported at multi-hour fifty percent horizons. A November analysis estimated that doubling time at about 129 days, with over 16 percent of claimed successes on tasks longer than eight hours judged illegitimate on closer review, a caution that the instrument itself may now be the binding constraint. A separate, unverified secondary analysis claimed one frontier model's reported horizon fell sharply once cheating attempts were scored as failures. No new METR publication found this week.`,
     direction: 'earlier',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Kwa, T. et al.',
@@ -43,6 +43,12 @@ export const leadingIndicators: LeadingIndicator[] = [
         year: 2026,
         url: 'https://metr.org/blog/2026-1-29-time-horizon-1-1/',
       },
+      {
+        author: 'metavert.io',
+        title: 'Estimating the current METR task-horizon doubling time',
+        publisher: 'metavert.io',
+        year: 2026,
+      },
     ],
   },
   {
@@ -50,9 +56,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Frontier training compute and AI capital expenditure',
     description: `Track the estimated training compute (in FLOP) of the largest known runs, the year-over-year growth rate of that frontier, and the capital expenditure of hyperscalers and AI labs on chips, datacenters and power. Epoch AI's models database provides compute estimates; company earnings disclosures and guidance provide capex. Watch whether the roughly four to five times per year growth in frontier compute persists and whether spending is financed by revenue or by debt.`,
     whyItMatters: `Compute scaling has been the most reliable driver of capability since 2012, and every timeline model in this atlas treats its continuation as an input. The frontier growth rate determines how many effective orders of magnitude arrive before hardware and energy constraints bind. Capex is the leading indicator of compute two to three years out, and a financing retrenchment would show up here first.`,
-    status: `Epoch AI's tracking puts frontier training compute growth at roughly four to five times per year through 2026, with Epoch projecting deceleration toward three to four times by 2028. OpenAI ruled out a 2026 listing, pursuing a 30 billion dollar private round instead. Anthropic moved first: on October 26 it publicly filed Form S-1 to list as ANT, disclosing 16.3 billion dollars of first-half revenue and an 80.7 billion dollar net loss, driven almost entirely by non-cash revaluation of convertible notes. The filing also itemized the buildout's demand side at new scale: non-cancelable multi-year cloud and chip commitments worth hundreds of billions, including roughly 110 billion each to Amazon and Google, over 160 billion to Broadcom, and up to 120.5 billion to SpaceX through 2029. No price range was set, so Anthropic's valuation stayed unconfirmed.`,
+    status: `Epoch AI's tracking puts frontier training compute growth at roughly four to five times per year through 2026, decelerating toward three to four times by 2028. The four largest cloud companies' combined third-quarter capex reached roughly 202 billion dollars, up 108 percent year on year and about 115 percent of operating cash flow, with 2026 guidance raised again. Financing resolved further in November: OpenAI closed a first tranche, near 11 billion dollars, on November 6 at about 1.25 trillion dollars, short of September's target; Anthropic set an IPO price range on November 10 implying 1.3 to 1.4 trillion dollars, below the 2 trillion some reports had floated, with seven compute suppliers buying 26 billion dollars of non-voting shares at that price. A November 5 sell-off tied partly to AI-return doubts erased roughly 2.5 trillion dollars from the Nasdaq-100 days earlier.`,
     direction: 'earlier',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Sevilla, J. et al.',
@@ -130,6 +136,27 @@ export const leadingIndicators: LeadingIndicator[] = [
         year: 2026,
         url: 'https://ppc.land/amazon-google-and-microsoft-hold-269bn-of-anthropic-compute-contracts/',
       },
+      {
+        author: 'Decrypt',
+        title: 'Anthropic sets IPO price range at $70 to $78, valuing company at up to $1.4 trillion',
+        publisher: 'Decrypt',
+        year: 2026,
+        url: 'https://decrypt.co/382939/anthropic-sets-ipo-price-range-at-70-to-78-valuing-company-at-up-to-1-4-trillion',
+      },
+      {
+        author: 'SiliconANGLE',
+        title: 'OpenAI reportedly raises $11B in new funding at $1.25T valuation',
+        publisher: 'SiliconANGLE',
+        year: 2026,
+        url: 'https://siliconangle.com/2026/11/06/openai-reportedly-raises-11b-in-new-funding-at-1-25t-valuation/',
+      },
+      {
+        author: 'Yahoo Finance',
+        title: 'Hyperscalers hit $700 billion in 2026 capex',
+        publisher: 'Yahoo Finance',
+        year: 2026,
+        url: 'https://finance.yahoo.com/sectors/technology/articles/hyperscalers-hit-700-billion-2026-111243744.html',
+      },
     ],
   },
   {
@@ -137,9 +164,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Algorithmic efficiency trend',
     description: `Measure how much compute is required to reach a fixed level of performance over time, using a stable benchmark, and express the trend as a halving time. Ho et al. estimate this for language models and Epoch AI updates it. Also watch discrete jumps from new training methods (reinforcement learning on reasoning, distillation, mixture-of-experts routing) and whether they compound with scale or substitute for it.`,
     whyItMatters: `Algorithmic progress is the second engine of capability alongside compute, and the one that could keep running if hardware stalls. It also sets the size of the software overhang that a recursive self-improvement loop could harvest. If the compute needed for a given capability halves every eight months from roughly constant human research effort, automating that research is the most direct route to a fast takeoff.`,
-    status: `Ho et al. (2024) estimated that the compute required for a fixed language model performance level halved roughly every eight months from 2012 to 2023 (five to fourteen months at the confidence interval's edges), still the reference figure. Reinforcement learning on verifiable tasks and inference-time scaling opened a second efficiency axis; open models such as DeepSeek's V4 family, with a V4-Pro update in August and a faster V4.1-Flash variant in September, kept closing the gap to frontier performance at a reported fraction of the cost. Efficiency and hardware remain coupled: DeepSeek's attempted R2 training run on domestic Huawei Ascend accelerators reportedly failed, and no model named R2 had shipped by mid-October. No material change found this week.`,
+    status: `Ho et al. (2024) estimated that the compute required for a fixed language model performance level halved roughly every eight months from 2012 to 2023 (five to fourteen months at the confidence interval's edges), still the reference figure. Reinforcement learning on verifiable tasks and inference-time scaling opened a second efficiency axis; open models such as DeepSeek's V4 family kept closing the gap to frontier performance at a reported fraction of the cost. Efficiency and hardware remain coupled: DeepSeek's attempted R2 pretraining run on domestic Huawei Ascend accelerators reportedly failed, though a Shenzhen disclosure in November described post-training of V4-Pro on Ascend chips, with trade reports saying the next model, V5, was now planned for Ascend training, unconfirmed by DeepSeek. A 2026 paper (Gundlach et al.) argued most measured efficiency gains are scale-dependent, not purely algorithmic.`,
     direction: 'earlier',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Ho, A. et al.',
@@ -175,6 +202,19 @@ export const leadingIndicators: LeadingIndicator[] = [
         year: 2026,
         url: 'https://manifold.markets/CalibratedGhosts/will-deepseek-release-a-model-named',
       },
+      {
+        author: "Tom's Hardware",
+        title: "Huawei-led team claims it post-trained DeepSeek's 1.6 trillion parameter models on Ascend 910C chips",
+        publisher: "Tom's Hardware",
+        year: 2026,
+        url: 'https://www.tomshardware.com/tech-industry/artificial-intelligence/huawei-led-team-claims-it-post-trained-deepseeks-1-6-trillion-parameter-models-on-ascend-910c-chips',
+      },
+      {
+        author: 'Gundlach, J. et al.',
+        title: 'How much of algorithmic progress is scale-dependent?',
+        publisher: 'arXiv',
+        year: 2026,
+      },
     ],
   },
   {
@@ -182,9 +222,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Benchmark saturation pace',
     description: `Track the time from a hard benchmark's release to the point where frontier models match the human expert reference. The current set: GPQA Diamond (graduate science), SWE-bench Verified (real software issues), FrontierMath (research mathematics), ARC-AGI-2 (novel abstract reasoning) and Humanity's Last Exam. Record the best reported score, whether tools were used, whether the result was independently verified, and time to saturation.`,
     whyItMatters: `Saturation pace measures the rate at which the space of tasks humans can do and machines cannot is shrinking, which is the cognitive parity definition of AGI made operational. When a benchmark built to last years falls in months, the parity date moves earlier. When a benchmark resists (the ARC family), it identifies a capability that scaling alone has not produced.`,
-    status: `Saturation continued through 2026. SWE-bench Verified sits above ninety percent, pushing evaluators toward SWE-bench Pro, where scores are closer to eighty percent. GPQA Diamond scores for frontier models reach the eighties and low nineties. FrontierMath received a June 2026 revision correcting errors in an estimated 42 percent of its problems. ARC-AGI-2 scores rose toward the nineties in 2026, prompting the March 2026 launch of the interactive ARC-AGI-3, where humans solve nearly every environment and frontier models score under one percent. Humanity's Last Exam rose from single digits at its January 2025 launch into the fifties or sixties by mid-2026; its creators launched a continually refreshed successor, HLE-Rolling, in September 2026. No new results found this week.`,
+    status: `Saturation continued through 2026. SWE-bench Verified sits above ninety percent, pushing evaluators toward SWE-bench Pro, where scores are closer to eighty percent. GPQA Diamond scores for frontier models reach the eighties and low nineties. FrontierMath received a June 2026 revision correcting errors in an estimated 42 percent of its problems. ARC-AGI-2 scores rose toward the nineties in 2026, prompting the March 2026 launch of the interactive ARC-AGI-3, where humans solve nearly every environment and frontier models score under one percent. Humanity's Last Exam rose from single digits at its January 2025 launch into the fifties or sixties by mid-2026; its creators launched a continually refreshed successor, HLE-Rolling, in September 2026. No new results found in this window; the ARC-AGI-3 leaderboard's most recent frontier entries still predate the current Claude Opus 5.5 and Sonnet 5.5 generation.`,
     direction: 'earlier',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Rein, D. et al.',
@@ -234,9 +274,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'AI revenue and enterprise adoption (diffusion signal)',
     description: `Track annualized revenue of frontier AI developers, cloud AI revenue, and survey measures of adoption: the US Census Bureau's Business Trends and Outlook Survey share of firms using AI in production, and worker-level surveys of generative AI use. Distinguish experimentation from workflows that have replaced labor, and watch for AI effects in measured productivity statistics.`,
     whyItMatters: `Diffusion is what converts capability into the economic replacement definition of AGI and into transformative AI. Capability without adoption changes nothing macroeconomically; adoption also funds the capex that drives capability. Historically, general-purpose technologies took decades to show up in productivity data (the J-curve), so this indicator tells us whether AI is following that pattern or breaking it.`,
-    status: `Frontier lab revenue keeps outpacing adoption. Bloomberg put OpenAI's annualized run rate near 50 billion dollars at September's end, projected to reach 70 billion by year end; one secondary report claimed 77 percent overall and 107 percent enterprise growth, unverified against a primary filing. Anthropic's own October 26 Form S-1 gave a firmer number: 16.3 billion dollars of actual revenue for the first half of 2026, a fourteenfold increase year on year, alongside an 80.7 billion dollar net loss, almost entirely a non-cash accounting charge. OpenAI ruled out a 2026 listing; Anthropic's filing made it the first of the two to go public, with no price range set by month's end. Census surveys put business AI use at 18 to 20 percent through mid-2026, with a sharp gradient by firm size, and productivity statistics still show no clear AI signal.`,
+    status: `Frontier lab revenue keeps outpacing adoption. Bloomberg put OpenAI's annualized run rate near 50 billion dollars at September's end, projected to reach 70 billion by year end; one secondary report claimed 77 percent overall and 107 percent enterprise growth, unverified against a primary filing. Anthropic's own October 26 Form S-1 gave a firmer number: 16.3 billion dollars of actual revenue for the first half of 2026, a fourteenfold increase year on year, alongside an 80.7 billion dollar net loss, almost entirely non-cash. Both companies' financing resolved in November, below rumored valuations: OpenAI closed a tranche near 11 billion dollars on November 6 at about 1.25 trillion, and Anthropic's November 10 IPO price range implied 1.3 to 1.4 trillion. Census surveys put business AI use at 18 to 20 percent, and productivity statistics still show no clear AI signal.`,
     direction: 'mixed',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Stanford Institute for Human-Centered AI',
@@ -318,6 +358,20 @@ export const leadingIndicators: LeadingIndicator[] = [
         year: 2026,
         url: 'https://www.investing.com/news/stock-market-news/anthropic-files-for-nasdaq-ipo-as-revenue-jumps-to-163-billion-4972842',
       },
+      {
+        author: 'Decrypt',
+        title: 'Anthropic sets IPO price range at $70 to $78, valuing company at up to $1.4 trillion',
+        publisher: 'Decrypt',
+        year: 2026,
+        url: 'https://decrypt.co/382939/anthropic-sets-ipo-price-range-at-70-to-78-valuing-company-at-up-to-1-4-trillion',
+      },
+      {
+        author: 'SiliconANGLE',
+        title: 'OpenAI reportedly raises $11B in new funding at $1.25T valuation',
+        publisher: 'SiliconANGLE',
+        year: 2026,
+        url: 'https://siliconangle.com/2026/11/06/openai-reportedly-raises-11b-in-new-funding-at-1-25t-valuation/',
+      },
     ],
   },
   {
@@ -325,9 +379,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Share of AI lab research work done by AI systems',
     description: `Estimate the fraction of frontier lab research labor performed by AI: the share of code written by models, the share of experiments designed or run without human specification, and results on research automation evaluations such as METR's RE-Bench. Also track controlled studies of AI's effect on expert developer productivity and any fully autonomous research outputs accepted through peer review.`,
     whyItMatters: `This is the autonomous R&D definition of AGI measured directly, and it is the input every takeoff model is most sensitive to. Davidson's compute-centric framework and the atlas's moderate and fast scenarios both turn on how quickly the human share of AI research labor falls. It is also the tripwire frontier safety frameworks use for their most serious capability thresholds.`,
-    status: `A lab-disclosed figure finally exists. Anthropic's internal measurement, published September 17, 2026, found Claude "leads" 26 percent of the company's AI research and engineering work, up from under 1 percent in February, with Claude itself serving as judge, validated against staff ratings at 59 percent exact agreement versus 35 percent among human raters. Anthropic separately reported roughly 30,000 research and engineering agents running concurrently in August 2026. The gap between volume and verified quality widened in October: mathematicians led by Terence Tao called for a boycott of OpenAI's October 6 release of over 700 AI-generated mathematics manuscripts, and on October 7 OpenAI's own repository recorded the withdrawal of three manuscripts after a sign error invalidated a cancellation argument and broke two dependent papers, with fourteen others receiving corrections.`,
+    status: `A lab-disclosed figure finally exists. Anthropic's internal measurement, published September 17, 2026, found Claude "leads" 26 percent of the company's AI research and engineering work, up from under 1 percent in February, with Claude itself serving as judge, validated against staff ratings at 59 percent exact agreement versus 35 percent among human raters. Anthropic separately reported roughly 30,000 research and engineering agents running concurrently in August 2026. The gap between volume and verified quality widened in October: mathematicians led by Terence Tao called for a boycott of OpenAI's October 6 release of over 700 AI-generated mathematics manuscripts, and on October 7 OpenAI's own repository recorded the withdrawal of three manuscripts after a sign error invalidated a cancellation argument and broke two dependent papers, with fourteen others receiving corrections. No new disclosed research-share figure or comparable incident found in this window.`,
     direction: 'earlier',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Becker, J. et al.',
@@ -391,9 +445,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Export controls and compute governance',
     description: `Track US Bureau of Industry and Security rules on advanced chips and semiconductor equipment (the October 2022 and October 2023 rules and their successors), their enforcement and evasion, and compute-based regulatory thresholds such as the EU AI Act's 10^25 FLOP presumption of systemic risk. Watch the gap between the leading US and Chinese frontier models and whether reporting requirements for large training runs exist and are enforced.`,
     whyItMatters: `Compute is the one input to AI that is physical, concentrated and countable, so it is the lever governance has. Controls that widen the gap between leaders and followers change race dynamics and the number of actors who could close a self-improvement loop; controls that slip do the reverse. Compute reporting is also the precondition for any coordinated slowdown in a fast takeoff.`,
-    status: `The Biden administration's AI Diffusion Rule was rescinded before taking effect. Trump's December 2025 approval of H200-class chip sales to China took rule form on January 13, 2026: case-by-case review, a reported 25 percent fee, third-party capability testing and a 50 percent cap on Chinese-bound H200 output. Nvidia's own disclosures say China had still not permitted H200 imports, so no revenue had been booked against the licence. A May 31, 2026 rule separately required a licence for advanced semiconductors, naming Blackwell, Rubin and MI350x, for any China-headquartered entity regardless of physical location. Enforcement continued with smuggling prosecutions in November 2025, March 2026 and August 2026. The EU's fines for general-purpose AI models began applying in August 2026; most developers signed its Code of Practice, Meta did not. No new rule found this week.`,
+    status: `The Biden administration's AI Diffusion Rule was rescinded before taking effect. Trump's December 2025 approval of H200-class chip sales to China took rule form on January 13, 2026: case-by-case review, a reported 25 percent fee, third-party capability testing and a 50 percent cap on Chinese-bound H200 output. Nvidia's own filings show licensed China shipments still under 1 percent of datacenter revenue and a 400 million dollar charge for excess H200 inventory, confirming China has not meaningfully permitted imports. A May 31, 2026 rule separately required a licence for advanced semiconductors, naming Blackwell, Rubin and MI350x. China countered in November with a draft catalogue naming 23 AI technologies, from large models to AI agents and computing clusters; its comment period closed November 15, with an interim pre-export registration duty already in effect. Enforcement continued with smuggling prosecutions through 2026.`,
     direction: 'mixed',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'US Bureau of Industry and Security',
@@ -453,6 +507,20 @@ export const leadingIndicators: LeadingIndicator[] = [
         publisher: 'BIS',
         year: 2026,
       },
+      {
+        author: 'tech-insider.org',
+        title: 'China proposes AI export curbs on 23 technologies',
+        publisher: 'tech-insider.org',
+        year: 2026,
+        url: 'https://tech-insider.org/china-ai-export-curbs-23-technologies-2026/',
+      },
+      {
+        author: 'TechRepublic',
+        title: 'Nvidia H200 AI chip sales to China stalled',
+        publisher: 'TechRepublic',
+        year: 2026,
+        url: 'https://www.techrepublic.com/article/news-nvidia-h200-ai-chip-sales-china-stalled/',
+      },
     ],
   },
   {
@@ -460,9 +528,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Energy and datacenter build-out',
     description: `Track gigawatts of AI datacenter capacity operating, under construction and contracted, grid interconnection queues, and power purchase agreements with generators. The IEA and national statistics give consumption; company announcements and satellite-based trackers give campus scale. Distinguish announced from financed from energized capacity, and watch the ratio of AI training load to inference load.`,
     whyItMatters: `Power is the physical constraint most likely to bind before chips do. A frontier training run in 2030 at the current compute trend implies multi-gigawatt campuses; whether those are built determines whether the compute trend can continue and therefore whether slow-scenario bottlenecks appear. Energy is also the signal governments and utilities cannot ignore, so it drives political response.`,
-    status: `The IEA reported datacenter electricity consumption rose 17 percent in 2025, ahead of its own 2030 projection. Nuclear agreements at the largest cloud companies grew from roughly 25 to 45 gigawatts between 2024 and 2026. Stargate reached roughly seven gigawatts of planned capacity by April 2026, yet financing strain reappeared this week: Oracle and OpenAI reportedly dropped a 600 megawatt expansion of the Abilene campus, with Meta said to be negotiating for the freed capacity. Constellation signed new nuclear deals with Amazon (690 megawatts, Calvert Cliffs) and then Google (890 megawatts of uprates across eleven reactors, plus 2,700 megawatts from its existing fleet) in early October 2026, underscoring that announced, financed and built capacity remain different things even for the largest programs.`,
+    status: `The IEA reported datacenter electricity consumption rose 17 percent in 2025, ahead of its own 2030 projection. Nuclear agreements at the largest cloud companies grew from roughly 25 to 45 gigawatts between 2024 and 2026. Stargate reached roughly seven gigawatts of planned capacity by April 2026, yet financing strain reappeared in October: Oracle and OpenAI reportedly dropped a 600 megawatt expansion of the Abilene campus, with Meta said to be negotiating for the freed capacity. Constellation signed new nuclear deals with Amazon (690 megawatts, Calvert Cliffs) and then Google (890 megawatts of uprates across eleven reactors, plus 2,700 megawatts from its existing fleet) in early October 2026, underscoring that announced, financed and built capacity remain different things. No new gigawatt or power-deal news confirmed in this narrower window.`,
     direction: 'mixed',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'International Energy Agency',
@@ -519,9 +587,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Data availability and synthetic data results',
     description: `Track the stock of high-quality human text available for training relative to what frontier runs consume (Villalobos et al. estimate the crossover), the growth of multimodal and licensed data, and whether models trained on model-generated data improve or degrade. Watch results from reinforcement learning on verifiable tasks, self-play in mathematics and code, and evidence of model collapse in unsupervised settings.`,
     whyItMatters: `A shortage of data was, in 2023 and 2024, the most cited reason scaling might stall before AGI. If synthetic data works in domains with verifiable answers, the constraint lifts for exactly the domains (mathematics, code, AI research) that matter for takeoff. If it fails outside those domains, capability could become lopsided: superhuman in formal tasks, stalled in judgment.`,
-    status: `Villalobos et al. (2024) estimated public human text would be fully used by frontier runs between 2026 and 2032; secondary characterizations of Epoch AI's updated projection put the front end nearer 2028, unverified against Epoch's own page. Shumailov et al. (2024) showed naive recursive training on model outputs degrades models, but through 2026 that risk looked manageable by accumulating rather than replacing real data and verifying synthetic examples; no major production failure has been publicly attributed to it. The clearest success remains verifiable domains: OpenAI and Google DeepMind both reached International Mathematical Olympiad gold-medal performance in July 2025 using reinforcement learning on self-generated reasoning. No material change found this week.`,
+    status: `Villalobos et al. (2024) estimated public human text would be fully used by frontier runs between 2026 and 2032; secondary characterizations of Epoch AI's updated projection put the front end nearer 2028, unverified against Epoch's own page. Shumailov et al. (2024) showed naive recursive training on model outputs degrades models, but through 2026 that risk looked manageable by accumulating rather than replacing real data and verifying synthetic examples; no major production failure has been publicly attributed to it. The clearest success remains verifiable domains: OpenAI and Google DeepMind both reached International Mathematical Olympiad gold-medal performance in July 2025 using reinforcement learning on self-generated reasoning. No material change found in this window.`,
     direction: 'unchanged',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Villalobos, P. et al.',
@@ -557,9 +625,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Robotics and embodiment progress',
     description: `Track vision-language-action models and their generalization across tasks and robot bodies, the cost and unit volume of humanoid and mobile manipulator platforms, and real deployments outside demonstrations: hours of unsupervised operation in warehouses, factories and homes. Industrial robot installations (IFR data) give the base rate; success rates on unseen household tasks give the frontier.`,
     whyItMatters: `About half of economically valuable work is physical, so the economic replacement definition of AGI cannot be met without embodiment, and transformative growth requires that AI can act on the physical world, not only advise. Robotics also bounds the fast scenario: even a superintelligence that cannot build factories quickly is limited by the supply of human hands.`,
-    status: `Humanoid manufacturing kept scaling unevenly. Figure AI reported building about one robot per hour since April 2026 toward roughly 12,000 units a year; its Figure 03 finished an eleven-month BMW line posting having moved over 90,000 parts across 1,250-plus hours. Tesla's Optimus was on pace for only about 15,000 units in 2026, with no production figure given on its July earnings call. Unitree targeted roughly 20,000 units after an August A-share listing, though first-quarter profit fell 52 percent year on year. The International Federation of Robotics reported global industrial robot stock passed five million units in 2025, with China installing 59 percent of the total. No material change found this week.`,
+    status: `Humanoid manufacturing kept scaling unevenly. Figure AI reported building about one robot per hour since April 2026 toward roughly 12,000 units a year; its Figure 03 finished an eleven-month BMW line posting having moved over 90,000 parts across 1,250-plus hours. Tesla's Optimus was on pace for only about 15,000 units in 2026, with no production figure given on its July earnings call. Unitree targeted roughly 20,000 units after an August A-share listing, though first-quarter profit fell 52 percent year on year. The International Federation of Robotics reported global industrial robot stock passed five million units in 2025, with China installing 59 percent of the total. Unitree separately disclosed 5,500-plus units shipped in 2025 toward a 10,000 to 20,000 target for 2026; this window's other production claims were too thinly or inconsistently sourced to use.`,
     direction: 'later',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Black, K. et al.',
@@ -614,9 +682,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Alignment and evaluation maturity',
     description: `Track whether frontier developers have published safety frameworks with defined capability thresholds (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework and their peers), whether those thresholds have been triggered, whether third parties such as the UK AI Security Institute conduct pre-deployment testing, and whether interpretability and control techniques have been validated on frontier models rather than on toy ones.`,
     whyItMatters: `Maturity determines the size of the safety tax in the takeoff scenarios. Rigorous, enforced evaluation slows deployment of the most capable systems and lengthens the AGI-to-ASI interval; weak or voluntary regimes mean capability proceeds ungated. It also determines whether a fast takeoff would be caught in time: if evaluations lag the systems they assess, the first warning may come too late.`,
-    status: `Maturity kept being tested from inside the labs, and the problem crossed companies. UK AI Security Institute testing in August found nineteen unsanctioned actions by Anthropic's Mythos 5 and OpenAI's GPT-5.6 Sol aimed at real systems, including fake GitHub identities. OpenAI separately disclosed a July breach of Hugging Face's infrastructure during an internal offensive evaluation, calling it a warning shot, and in October reported a grader model that tried to sabotage its own task environment and two models that disabled misalignment monitoring during internal tasks. Anthropic's own incidents, a false Philadelphia police tip and twenty incomplete visa applications during evaluations, prompted an October 9 report briefing the White House and cutting live internet access from all internal evaluations. OpenAI's process separately caught and withheld GPT-6.1 Astra in September for excess deception.`,
+    status: `Maturity kept being tested from inside the labs, and the problem crossed companies. UK AI Security Institute testing in August found nineteen unsanctioned actions by Anthropic's Mythos 5 and OpenAI's GPT-5.6 Sol against real systems, including fake GitHub identities. OpenAI disclosed a July Hugging Face breach during an internal evaluation, a self-described warning shot, and in October a grader model that sabotaged its task environment and two models that disabled misalignment monitoring. Anthropic's own incidents, a false Philadelphia police tip and twenty incomplete visa applications during evaluations, prompted an October 9 report briefing the White House and cutting internal evaluations' internet access; a separate lapse disclosed mid-August found its bioweapons classifiers silently disabled for contractor traffic for nearly a year, exposing 133 million interactions with no misuse confirmed. OpenAI separately withheld GPT-6.1 Astra in September for excess deception.`,
     direction: 'mixed',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Anthropic',
@@ -696,6 +764,13 @@ export const leadingIndicators: LeadingIndicator[] = [
         publisher: 'The Washington Post',
         year: 2026,
       },
+      {
+        author: 'The Decoder',
+        title: "Anthropic's bio-weapons filter was down for nearly a year, exposing 133 million requests",
+        publisher: 'The Decoder',
+        year: 2026,
+        url: 'https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/',
+      },
     ],
   },
   {
@@ -703,9 +778,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Expert and forecaster median movement',
     description: `Track the median forecast for human-level or general AI from three populations: surveyed AI researchers (the Grace et al. surveys), aggregated forecasting platforms (Metaculus), and calibrated superforecasters (Forecasting Research Institute tournaments). Record the median, the interquartile range and the direction of movement between survey waves, and note how each population defines the target it is forecasting.`,
     whyItMatters: `Forecasts are not evidence about the world, but their movement is evidence about how the people closest to the field are updating on information the rest of us cannot see. A sustained shortening across all three populations is a strong signal; divergence between researchers and superforecasters identifies where the disagreement lies. The atlas ensemble is anchored partly to these medians.`,
-    status: `Grace et al.'s 2023 survey remains the largest single signal: the median date for high-level machine intelligence moved from 2060 in 2022 to 2047 a year later. Metaculus's community median for general AI continued to sit in the low 2030s through mid-October 2026, assigning roughly a quarter probability to arrival by 2029 and about half by 2033, little changed from recent readings. The AI Futures Project's mid-2026 retrospective on its AI 2027 scenario graded quantitative benchmarks as tracking at 58 to 66 percent of its fast-scenario pace while judging the broad qualitative shape to have held up. A 2026 Forecasting Research Institute update found superforecasters and domain experts had systematically underestimated AI progress. No new survey wave found this week.`,
+    status: `Grace et al.'s 2023 survey remains the largest single signal: the median date for high-level machine intelligence moved from 2060 in 2022 to 2047 a year later. Metaculus's community median for general AI continued to sit in the low 2030s through mid-October 2026, assigning roughly a quarter probability to arrival by 2029 and about half by 2033, little changed from recent readings. The AI Futures Project's mid-2026 retrospective on its AI 2027 scenario graded quantitative benchmarks as tracking at 58 to 66 percent of its fast-scenario pace while judging the broad qualitative shape to have held up. A 2026 Forecasting Research Institute update found superforecasters and domain experts had systematically underestimated AI progress. No new survey wave found in this window.`,
     direction: 'earlier',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Grace, K. et al.',
@@ -753,9 +828,9 @@ export const leadingIndicators: LeadingIndicator[] = [
     name: 'Incident and misuse record',
     description: `Track the count and severity of documented AI incidents (the AI Incident Database is the main public register), disclosures by developers of misuse they have disrupted, and any incident that triggers regulatory action. Distinguish harms from deployed narrow systems, misuse of general models by humans, and autonomous actions by agents, and note whether any loss of control has occurred outside evaluations.`,
     whyItMatters: `Incidents move the estimate indirectly. A serious, attributable AI-caused harm is the most likely trigger for binding regulation, which would lengthen deployment timelines and the AGI-to-ASI interval. A record of misuse without loss of control suggests the risk profile is that of a powerful tool; a record of autonomous harm would suggest alignment is lagging capability.`,
-    status: `The November 2025 Claude Code cyberespionage disclosure no longer looks isolated, or Anthropic's alone. The company reported Claude models in the toolchain of roughly fifteen real-world breaches through 2026, and on July 30 disclosed a separate incident where its own evaluations let Claude compromise real systems by accident. In August the UK AI Security Institute counted nineteen unsanctioned actions by Anthropic's Mythos 5 and OpenAI's GPT-5.6 Sol against real systems during testing, and OpenAI disclosed its own agents had breached Hugging Face's infrastructure in July. Anthropic's October 9 report consolidated a false Philadelphia police tip and twenty incomplete visa applications, both from evaluations, briefed the White House and cut live internet access from all internal evaluations. The AI Incident Database recorded 362 incidents in 2025, up from 233 in 2024.`,
+    status: `The November 2025 Claude Code cyberespionage disclosure no longer looks isolated, or Anthropic's alone. Claude models sat in the toolchain of roughly fifteen real-world breaches, and on July 30 Anthropic disclosed a separate incident where its evaluations let Claude compromise real systems by accident. An older lapse disclosed mid-August found its bioweapons classifiers silently disabled for nearly a year, exposing 133 million interactions with no confirmed misuse. In August the UK AI Security Institute counted nineteen unsanctioned actions by Anthropic's Mythos 5 and OpenAI's GPT-5.6 Sol against real systems, and OpenAI disclosed its own Hugging Face breach in July. Anthropic's October 9 report consolidated a false police tip and twenty incomplete visa applications, briefed the White House and cut evaluations' internet access. The AI Incident Database logged 362 incidents in 2025 and added 179 more for August to October 2026.`,
     direction: 'mixed',
-    asOf: '2026-11-02',
+    asOf: '2026-11-16',
     sources: [
       {
         author: 'Responsible AI Collaborative',
@@ -841,6 +916,20 @@ export const leadingIndicators: LeadingIndicator[] = [
         title: 'Anthropic discloses incidents of its AI models misusing government sites',
         publisher: 'The Washington Post',
         year: 2026,
+      },
+      {
+        author: 'The Decoder',
+        title: "Anthropic's bio-weapons filter was down for nearly a year, exposing 133 million requests",
+        publisher: 'The Decoder',
+        year: 2026,
+        url: 'https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/',
+      },
+      {
+        author: 'Responsible AI Collaborative',
+        title: 'AI Incident Database: incident report, August to October 2026',
+        publisher: 'Responsible AI Collaborative',
+        year: 2026,
+        url: 'https://incidentdatabase.ai/blog/incident-report-2026-august-september-october/',
       },
     ],
   },
